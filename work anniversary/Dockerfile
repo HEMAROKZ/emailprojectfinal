@@ -13,7 +13,7 @@ COPY src/main/resources/Msyslogo.jpg Msyslogo.jpg
 COPY src/main/resources/anniversary.jpg anniversary.jpg
 
 # Expose the port on which your Spring Boot application will run (adjust as needed)
-EXPOSE 8089
+EXPOSE 8080
 
 # Define the entry point to run the application when the container starts
 ENTRYPOINT ["java", "-jar", "app.jar"]
