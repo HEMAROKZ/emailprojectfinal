@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Msys Talent Management</title>
+    <link rel="icon" href="/images/Msyslogoicon.png" type="image/png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff; /* Blue header background color */
+            color: #007bff; /* White text color */
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Add styles for the header image (logo) */
+        #header-logo {
+            width: 120px; /* Adjust the image width as needed */
+            height: auto; /* Auto height to maintain aspect ratio */
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Background Image Below Header */
+        .background-image {
+            background-image: url("/images/background.jpg"); /* Set your background image URL here */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            flex: 1; /* Expand to fill available space vertically */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 85vh; /* Ensure the minimum height is viewport height */
+        }
+
+        /* Centered content on the background image */
+        .background-content {
+            text-align: center;
+            color: black; /* Change text color to black */
+            max-width: 80%; /* Limit content width for readability */
+        }
+
+        /* Style for bold labels */
+        label {
+            font-weight: bold; /* Make labels bold */
+            color: black; /* Change label text color to black */
+        }
+
+        /* Increase the font size of h2 */
+        h2 {
+            font-size: 48px; /* Adjust the font size as needed */
+        }
+
+        /* Increase the font size of p */
+        p {
+            font-size: 24px; /* Adjust the font size as needed */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #f8f9fa; /* Light gray background color */
+            color: #333; /* Dark text color */
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 10px; /* Adjust spacing between icons */
+        }
+
+        .social-icons a {
+            color: #333; /* Dark text color */
+            text-decoration: none;
+            font-size: 10px; /* Adjust icon size as needed */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="ml-2">
+        <img src="/images/Msyslogo.jpg" alt="Company Logo" id="header-logo">
+    </div>
+    <div>
+        <h1></h1>
+    </div>
+    <div class="mr-2">
+        <!-- Login Form -->
+        <form th:action="@{/login}" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <!-- End Login Form -->
+    </div>
+</header>
+
+<div class="background-image">
+    <div class="background-content">
+        <h2>Welcome to MSys Talent Management</h2>
+        <p>Unlock Your Potential with Us</p>
+    </div>
+</div>
+
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+            <img src="/images/Msyslogo.jpg" alt="Company Logo" width="30" height="24" class="mr-2">
+        </a>
+        <span class="mb-3 mb-md-0 text-body-secondary">MSys Technologies, LLC</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-icons">
+        <li><a class="text-body-secondary" href="https://twitter.com/MSys_Tech"><img src="/images/twitter-1.png" alt="Twitter" width="32" height="32"></a></li>
+        <li><a class="text-body-secondary" href="https://www.instagram.com/msys_technologies/?hl=en"><img src="/images/insta.png" alt="Instagram" width="32" height="32"></a></li>
+        <li><a class="text-body-secondary" href="https://www.facebook.com/MSysTechnologies/"><img src="/images/facebook-1.png" alt="Facebook" width="32" height="32"></a></li>
+    </ul>
+</footer>
+</body>
+</html>
